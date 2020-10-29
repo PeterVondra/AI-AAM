@@ -1,0 +1,12 @@
+-Invariant representation IR
+	Consider using neural network for invariant representations, as in multiple hidden layers acting as abstractions
+-Auto associative memory AAM
+	Find out more on how these are built
+	Memory is stored in a hierarchy
+-Predict based on memory PDM
+	Neural networks are in general predictive, the memory network should have this integrated
+-Time is also a factor in memory, just as sequences are
+
+INPUT -> IR -> AAM -> PDM -> OUTPUT
+
+IR.NN.CORRECTION_DATA = AAM.OUTPUT
