@@ -1,0 +1,61 @@
+[
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\main.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/main.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\include\\Math\\src\\Math.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\include\\Math\\src\\Math.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/include/Math/src/Math.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\include\\Math\\src\\Matrix.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\include\\Math\\src\\Matrix.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/include/Math/src/Matrix.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\include\\Math\\src\\Vector.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\include\\Math\\src\\Vector.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/include/Math/src/Vector.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\include\\Math\\src\\Quaternion.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\include\\Math\\src\\Quaternion.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/include/Math/src/Quaternion.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\include\\Math\\src\\Transform.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\include\\Math\\src\\Transform.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/include/Math/src/Transform.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\include\\Utils\\src\\Logger.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\include\\Utils\\src\\Logger.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/include/Utils/src/Logger.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\NNetwork.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\NNetwork.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/NNetwork.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\NNetworkTrainer.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\NNetworkTrainer.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/NNetworkTrainer.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100183~1.0\\x64\\rc.exe   -DWIN32   /fo CMakeFiles\\AI.dir\\resources\\icon.rc.res C:\\Users\\peter\\Desktop\\development\\AI-AAM\\resources\\icon.rc",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/resources/icon.rc"
+}
+]

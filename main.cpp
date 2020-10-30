@@ -32,10 +32,10 @@ int main()
 	std::vector<std::pair<MatrixN, MatrixN>> a;
 	a.resize(1);
 	a[0].first = MatrixN(1, 5, 1.0);
-	a[0].first[2] = 0.0;
-	a[0].first[4] = 0.0;
+	a[0].first[2] = -1.0;
+	a[0].first[4] = -1.0;
 	a[0].second = MatrixN(1, 3, 1.0);
-	a[0].second[1] = 0.0;
+	a[0].second[1] = -1.0;
 
 	MatrixN M;
 	int c = 0;
@@ -55,7 +55,7 @@ int main()
 	}
 
 	for (auto& p : a)
-		M = M + (p.first.transposed() * p.second);
+		M = (p.first.transposed() * p.second);
 
 	std::cout << a[0].first << ", " << a[0].second << std::endl;
 	std::cout << "A0 * M = " << a[0].first * M << std::endl;
@@ -67,7 +67,7 @@ int main()
 	//xnn::polyReg(v, 0.0000000001, 1000000, points);
 	//xnn::trigReg(v[0], v[1], v[2], v[3], 0.0001, 1000, points);
 
-	/*const int batchsize = 1;
+	const int batchsize = 1;
 	int imagecount = 0;
 
 	std::vector<MatrixN> images;
@@ -154,7 +154,7 @@ int main()
 					index = j;
 				}
 				//sum += nn.getOutput()[j];
-
+				
 				//if(k == 0)
 				//	std::cout << nn.getOutput()[j] << ", " << "[" << j << ", " << labels[i] << "]" << std::endl;
 			}
@@ -193,7 +193,7 @@ int main()
 	std::cout << Utils::Logger::getTimePoint() - start << "s" << std::endl;
 
 	thr.join();
-
+	/*
 	//int counter = 0;
 	//
 	//for (int i = 0; i < testlabels.size(); i++)

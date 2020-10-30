@@ -1,0 +1,16 @@
+# ninja log v5
+25	1053	625666699	CMakeFiles/AI.dir/include/Math/src/Transform.cpp.obj	ff62756cd2ee8f55
+29	1071	625666699	CMakeFiles/AI.dir/include/Math/src/Vector.cpp.obj	ddc89bdfcb7253cd
+40	1105	625666699	CMakeFiles/AI.dir/resources/icon.rc.res	b2cbbae85dd710ce
+5	1108	625666699	CMakeFiles/AI.dir/include/Math/src/Math.cpp.obj	cfe4980183dbee7c
+16	1123	625666699	CMakeFiles/AI.dir/include/Math/src/Quaternion.cpp.obj	5c1f8ae4e4fe71ff
+12	1253	625666699	CMakeFiles/AI.dir/include/Math/src/Matrix.cpp.obj	3f3c868df41e56a9
+35	1970	625666700	CMakeFiles/AI.dir/NNetwork.cpp.obj	363b058ecdb49d6f
+20	2035	625666700	CMakeFiles/AI.dir/include/Utils/src/Logger.cpp.obj	3f680b50be3063bf
+1	2113	625666700	CMakeFiles/AI.dir/main.cpp.obj	804f0917b3d84582
+50	2211	625666700	CMakeFiles/AI.dir/NNetworkTrainer.cpp.obj	a2a68e874f453cb9
+2211	5120	625666703	../../../AI.exe	6eff6c5c676f6e89
+1	1072	625666794	CMakeFiles/AI.dir/main.cpp.obj	804f0917b3d84582
+1072	1587	625666794	../../../AI.exe	6eff6c5c676f6e89
+1	1444	625769880	CMakeFiles/AI.dir/main.cpp.obj	804f0917b3d84582
+1444	2128	625769880	../../../AI.exe	6eff6c5c676f6e89
