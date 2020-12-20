@@ -887,7 +887,7 @@ std::ostream& operator<< (std::ostream& output, Matrix4f& mat4)
 //MatrixND
 /////////////////////////////////////////////////////////////////
 
-double MatrixN::getRow(unsigned int row, unsigned int rowIndex)
+double& MatrixN::getRow(unsigned int row, unsigned int rowIndex)
 {
     if(rowIndex > m_columns)
         rowIndex = m_columns - 1;
@@ -895,16 +895,26 @@ double MatrixN::getRow(unsigned int row, unsigned int rowIndex)
         row = m_rows - 1;
     return m[(row + 1) * m_columns - (m_columns - rowIndex)];
 }
-double MatrixN::getColumn(unsigned int column, unsigned int columnIndex)
+double& MatrixN::getColumn(unsigned int column, unsigned int columnIndex)
 { 
-    if(columnIndex > m_rows)
-        columnIndex = m_rows - 1;
-    if(column > m_columns)
-        column = m_columns - 1;
-    transpose();
-    double temp = getRow(column, columnIndex);
-    transpose();
-    return temp;
+    return getRow(columnIndex, column);
+}
+
+MatrixN MatrixN::getRow(unsigned int row)
+{
+    MatrixN result(1, m_columns, 0.0);
+    for(int c = 0; c < m_columns; c++)
+        result.getColumn(c, 0) = getRow(row, c);
+
+    return result;
+}
+MatrixN MatrixN::getColumn(unsigned int column)
+{ 
+    MatrixN result(m_rows, 1, 0.0);
+    for (int r = 0; r < m_rows; r++)
+        result.getRow(r, 0) = getColumn(column, r);
+
+    return result;
 }
 void MatrixN::setRow(unsigned int row, unsigned int rowIndex, const double value)
 {
@@ -961,28 +971,38 @@ MatrixN MatrixN::getSign()
 
 MatrixN MatrixN::dot(MatrixN& a)
 {
-	MatrixN result(m_rows, a.m_columns, (double)0);
-
 	if (m_columns != a.m_rows)
 	{
-		std::cout << "columns " << m_columns << " != rows " << a.m_rows << std::endl;
+        MatrixN result;
+
+        // If both is vectors
+        if (m_columns == a.m_columns && m_rows == 1 && a.m_rows == 1) {
+            a.transpose();
+            result = MatrixN(m_rows, a.m_columns, (double)0);
+            for (int i = 0; i < m_rows; i++)
+                for (int j = 0; j < a.m_columns; j++)
+                    for (int h = 0; h < m_columns; h++)
+                        result.getRow(i, j) += getRow(i, h) * a.getColumn(j, h);
+            a.transpose();
+        }
+        else if (m_rows == a.m_rows && m_rows == 1 && a.m_rows == 1) {
+            result = MatrixN(m_rows, a.m_columns, (double)0);
+            a.transpose();
+            for (int i = 0; i < m_rows; i++)
+                for (int j = 0; j < a.m_columns; j++)
+                    for (int h = 0; h < m_columns; h++)
+                        result.getRow(i, j) += getRow(i, h) * a.getColumn(j, h);
+            a.transpose();
+        }
 		return result;
 	}
 
-	double w = 0;
+    MatrixN result(m_rows, a.m_columns, (double)0);
 
 	for (int i = 0; i < m_rows; i++)
-	{
 		for (int j = 0; j < a.m_columns; j++)
-		{
 			for (int h = 0; h < m_columns; h++)
-			{
-				w += getRow(i, h) * a.getRow(h, j);
-			}
-			result.setRow(i, j, w);
-            w = 0;
-		}
-	}
+				result.getRow(i, j) += getRow(i, h) * a.getColumn(j, h);
 
 	return result;
 }
@@ -1089,6 +1109,80 @@ MatrixN MatrixN::operator-(MatrixN& rhs)
         std::cout << "operation: (-) on Matrix[" << m_rows << "x" << m_columns << "], Matrix[" << rhs.m_rows << "x" << rhs.m_columns << "] : Failed" << std::endl;
 
     return *this;
+}
+
+void MatrixN::print(const uint16_t p_Precision)
+{
+    std::cout << std::fixed << std::setprecision(0) << "";
+    std::cout << "Matrix " << getRowSize() << "x" << getColumnSize();
+    int j = 0;
+    for (int i = 0; i < getRowSize() * getColumnSize(); i++)
+    {
+        if (i == j * getColumnSize())
+        {
+            j++;
+            std::cout << "\n";
+        }
+        std::cout << std::fixed << std::setprecision(p_Precision) << m[i] << "   ";
+    }
+    std::cout << "\n";
+}
+
+void MatrixN::print(const uint64_t p_Rows, const uint64_t p_Columns, const uint16_t p_Precision)
+{
+    std::cout << std::fixed << std::setprecision(0) << "";
+    std::cout << "Matrix " << p_Rows << "x" << p_Columns;
+    int j = 0;
+    for (int i = 0; i < p_Rows * p_Columns; i++)
+    {
+        if (i == j * p_Columns)
+        {
+            j++;
+            std::cout << "\n";
+        }
+        std::cout << std::fixed << std::setprecision(p_Precision) << m[i] << "   ";
+    }
+    std::cout << "\n";
+}
+
+void MatrixN::print(const uint16_t p_Precision, const double p_HiddenNumber)
+{
+    std::cout << std::fixed << std::setprecision(0) << "";
+    std::cout << "Matrix " << getRowSize() << "x" << getColumnSize();
+    int j = 0;
+    for (int i = 0; i < getRowSize() * getColumnSize(); i++)
+    {
+        if (i == j * getColumnSize())
+        {
+            j++;
+            std::cout << "\n";
+        }
+        if (m[i] == p_HiddenNumber)
+            std::cout << std::fixed << std::setprecision(p_Precision) << "    ";
+        else
+            std::cout << std::fixed << std::setprecision(p_Precision) << m[i] << "   ";
+    }
+    std::cout << "\n";
+}
+
+void MatrixN::print(const uint64_t p_Rows, const uint64_t p_Columns, const uint16_t p_Precision, const double p_HiddenNumber)
+{
+    std::cout << std::fixed << std::setprecision(0) << "";
+    std::cout << "Matrix " << p_Rows << "x" << p_Columns;
+    int j = 0;
+    for (int i = 0; i < p_Rows * p_Columns; i++)
+    {
+        if (i == j * p_Columns)
+        {
+            j++;
+            std::cout << "\n";
+        }
+        if(m[i] == p_HiddenNumber)
+            std::cout << std::fixed << std::setprecision(p_Precision) << "    ";
+        else
+            std::cout << std::fixed << std::setprecision(p_Precision) << m[i] << "   ";
+    }
+    std::cout << "\n";
 }
 
 std::ostream& operator<< (std::ostream& output, MatrixN& matN)

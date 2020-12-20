@@ -41,7 +41,9 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
 
 add_executable(
     AI
-    main.cpp
+    AutoAssociativeImages.cpp
+    HopField.h
+    HopField.cpp
 	${headers}
     ${sources}
 	resources/icon.rc

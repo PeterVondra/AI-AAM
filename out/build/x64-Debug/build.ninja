@@ -38,7 +38,14 @@ include rules.ninja
 
 build cmake_object_order_depends_target_AI: phony || CMakeFiles\AI.dir
 
-build CMakeFiles\AI.dir\main.cpp.obj: CXX_COMPILER__AI ..\..\..\main.cpp || cmake_object_order_depends_target_AI
+build CMakeFiles\AI.dir\AutoAssociativeImages.cpp.obj: CXX_COMPILER__AI ..\..\..\AutoAssociativeImages.cpp || cmake_object_order_depends_target_AI
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14
+  OBJECT_DIR = CMakeFiles\AI.dir
+  OBJECT_FILE_DIR = CMakeFiles\AI.dir
+  TARGET_COMPILE_PDB = CMakeFiles\AI.dir\
+  TARGET_PDB = ..\..\..\AI.pdb
+
+build CMakeFiles\AI.dir\HopField.cpp.obj: CXX_COMPILER__AI ..\..\..\HopField.cpp || cmake_object_order_depends_target_AI
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14
   OBJECT_DIR = CMakeFiles\AI.dir
   OBJECT_FILE_DIR = CMakeFiles\AI.dir
@@ -117,7 +124,7 @@ build CMakeFiles\AI.dir\resources\icon.rc.res: RC_COMPILER__AI C$:\Users\peter\D
 #############################################
 # Link the executable ..\..\..\AI.exe
 
-build ..\..\..\AI.exe: CXX_EXECUTABLE_LINKER__AI CMakeFiles\AI.dir\main.cpp.obj CMakeFiles\AI.dir\include\Math\src\Math.cpp.obj CMakeFiles\AI.dir\include\Math\src\Matrix.cpp.obj CMakeFiles\AI.dir\include\Math\src\Vector.cpp.obj CMakeFiles\AI.dir\include\Math\src\Quaternion.cpp.obj CMakeFiles\AI.dir\include\Math\src\Transform.cpp.obj CMakeFiles\AI.dir\include\Utils\src\Logger.cpp.obj CMakeFiles\AI.dir\NNetwork.cpp.obj CMakeFiles\AI.dir\NNetworkTrainer.cpp.obj CMakeFiles\AI.dir\resources\icon.rc.res
+build ..\..\..\AI.exe: CXX_EXECUTABLE_LINKER__AI CMakeFiles\AI.dir\AutoAssociativeImages.cpp.obj CMakeFiles\AI.dir\HopField.cpp.obj CMakeFiles\AI.dir\include\Math\src\Math.cpp.obj CMakeFiles\AI.dir\include\Math\src\Matrix.cpp.obj CMakeFiles\AI.dir\include\Math\src\Vector.cpp.obj CMakeFiles\AI.dir\include\Math\src\Quaternion.cpp.obj CMakeFiles\AI.dir\include\Math\src\Transform.cpp.obj CMakeFiles\AI.dir\include\Utils\src\Logger.cpp.obj CMakeFiles\AI.dir\NNetwork.cpp.obj CMakeFiles\AI.dir\NNetworkTrainer.cpp.obj CMakeFiles\AI.dir\resources\icon.rc.res
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG
   LINK_FLAGS = -static /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

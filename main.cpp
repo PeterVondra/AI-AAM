@@ -1,5 +1,6 @@
 #include<iostream>
 #include <thread>
+#include <bitset>
 #include "include/Utils/Logger.h"
 #include "include/Math/Math.h"
 #include "include/Math/Vector.h"
@@ -8,6 +9,7 @@
 #include "NNetworkTrainer.h"
 #include "MNISTDataLoader.h"
 #include "Regression.h"
+#include "HopField.h"
 
 bool breakLearning = false;
 bool showHighest = false;
@@ -29,44 +31,6 @@ void tf()
 
 int main()
 {
-	std::vector<std::pair<MatrixN, MatrixN>> a;
-	a.resize(1);
-	a[0].first = MatrixN(1, 5, 1.0);
-	a[0].first[2] = -1.0;
-	a[0].first[4] = -1.0;
-	a[0].second = MatrixN(1, 3, 1.0);
-	a[0].second[1] = -1.0;
-
-	MatrixN M;
-	int c = 0;
-	int r = 0;
-	for (auto& p : a) {
-		if (c < p.first.getColumnSize())
-			c = p.first.getColumnSize();
-		if (r < p.first.getRowSize())
-			r = p.first.getRowSize();
-
-		if (c < p.second.getColumnSize())
-			c = p.second.getColumnSize();
-		if (r < p.second.getRowSize())
-			r = p.second.getRowSize();
-
-		M = MatrixN(c, r, 0.0);
-	}
-
-	for (auto& p : a)
-		M = (p.first.transposed() * p.second);
-
-	std::cout << a[0].first << ", " << a[0].second << std::endl;
-	std::cout << "A0 * M = " << a[0].first * M << std::endl;
-	std::cout << "B0 * M = " << a[0].second * M.transposed() << std::endl;
-
-	//std::vector<Vector2f> points = { { 1, 4 }, { 2, 6 }, { 3, 5 }, { 4, 4 }, { 5, 5 }};
-
-	//std::vector<float> v(4);
-	//xnn::polyReg(v, 0.0000000001, 1000000, points);
-	//xnn::trigReg(v[0], v[1], v[2], v[3], 0.0001, 1000, points);
-
 	const int batchsize = 1;
 	int imagecount = 0;
 

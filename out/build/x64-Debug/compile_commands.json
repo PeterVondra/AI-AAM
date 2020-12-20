@@ -1,8 +1,14 @@
 [
 {
   "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
-  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\main.cpp",
-  "file": "C:/Users/peter/Desktop/development/AI-AAM/main.cpp"
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\AutoAssociativeImages.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\AutoAssociativeImages.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/AutoAssociativeImages.cpp"
+},
+
+{
+  "directory": "C:/Users/peter/Desktop/development/AI-AAM/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\HostX64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG   -std:c++14 /FoCMakeFiles\\AI.dir\\HopField.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\peter\\Desktop\\development\\AI-AAM\\HopField.cpp",
+  "file": "C:/Users/peter/Desktop/development/AI-AAM/HopField.cpp"
 },
 
 {

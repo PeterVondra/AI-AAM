@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\include",
+    "\\include\\Math",
+    "\\include\\Math\\src"
   ],
-  "SelectedNode": "\\TODO",
+  "SelectedNode": "\\AutoAssociativeImages.cpp",
   "PreviewInSolutionExplorer": false
 }

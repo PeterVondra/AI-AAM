@@ -4,6 +4,7 @@
 #include <cmath>
 #include <iomanip>
 #include <algorithm>
+#include <string>
 
 #include "Vector.h"
 #include "Math.h"
@@ -240,17 +241,6 @@ class MatrixN
                 m.push_back(value);
             }
         }
-        MatrixN(const int rows, const int columns, const bool random_fill)
-        : m_rows(rows), m_columns(columns)
-        {
-            for(int i = 0; i < rows * columns; i++)
-            {
-                if(random_fill)
-                    m.push_back(Math::getRandomNumberND(0.0, 1.0));
-                else
-                    m.push_back(0.0);
-            }
-        } 
         // X is min and Y is max
         MatrixN(const int rows, const int columns, Vector2f random_value_extent)
         : m_rows(rows), m_columns(columns)
@@ -263,8 +253,10 @@ class MatrixN
 
         std::vector<double>& getRawData() { return m; };
 
-        double getRow(unsigned int row, unsigned int rowIndex);
-        double getColumn(unsigned int column, unsigned int columnIndex);
+        double& getRow(unsigned int row, unsigned int rowIndex);
+        MatrixN getRow(unsigned int row);
+        double& getColumn(unsigned int column, unsigned int columnIndex);
+        MatrixN getColumn(unsigned int column);
 
         void setRow(unsigned int row, unsigned int rowIndex, const double value);
         void setColumn(unsigned int column, unsigned int columnIndex, const double value);
@@ -289,9 +281,14 @@ class MatrixN
         void transpose();
         MatrixN transposed();
 
+        void print(const uint16_t p_Precision);
+        void print(const uint16_t p_Precision, const double p_HiddenNumber);
+        void print(const uint64_t p_Rows, const uint64_t p_Columns, const uint16_t p_Precision);
+        void print(const uint64_t p_Rows, const uint64_t p_Columns, const uint16_t p_Precision, const double p_HiddenNumber);
+
+        unsigned int m_rows, m_columns;
     protected:
     private:
-        unsigned int m_rows, m_columns;
         std::vector<double> m;
 
         //void push_all(std::vector<double>& vec){}
